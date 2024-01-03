@@ -25,7 +25,8 @@ realtime = str(time)
 multipleUserInput = input("Multiple User Entry? Y/N ")
 if (multipleUserInput == "N" ):
     print(" No multiple entry activated.")
-     #Prompting for arivee's name.
+     #Prompting for arivee's name, function call.
+    entry()
     
     
 #Multiple User Entry during runtime functionality. 
@@ -35,12 +36,13 @@ else:
     #Converting string into an int.
     multipleEntryInt = int(multipleEntry)
     
-    
+#Calling the function the amount of times entered during Multiple User Entry
 for x in range (multipleEntryInt):
+    print(x)
     entry()
     
     
-    print("Invalid, single user entry detected.")
+    
     
     
 
