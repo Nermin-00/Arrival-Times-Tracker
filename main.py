@@ -1,65 +1,36 @@
-#Importing library.
-import datetime
-#Importing tkinter  GUI
 from tkinter import *
-
-#Entry initiation function
-def printtext():
-    global e
-    #storing value of e.get into "string"
-    string = e.get(); 
-    #^prints the string
-    print (string)
-
-        #Concatecating and joining time and arivee variables.
-    
-
-    #Opening the logs.txt file to write, 'a' argument to continue on to already written file.
-        ##openlogs = open('logs.txt', 'a')
-    #Actually writing into the file, from the info variable we made earlier.
-        ##openlogs.write(info)
-
-    #Assigning time to a variable.
-        ##time = datetime.datetime.now()
-
-#Converting realtime output into a string for further processing.
-        ##realtime = str(time)
+ 
 root = Tk()
-e = Entry(root)
-e.pack()
-e.focus_set()
-
-root.geometry('400x200')
-
-##This is button funcitonality
-#When we click, we want to store text 
-#from input box to .txt file
-#our entry() function does that already
-#maybe we could call it.
-#We called it but it gets called on button event, and -expects prompt in the console-
-
-    
-#Assigning time to a variable.
-#time = datetime.datetime.now()
-
-#Converting realtime output into a string for further processing.
-#realtime = str(time)
-
-
-##entry1 = Entry(root, width=20)entry1.pack()
-
-Button(root, text="Enter user", command=printtext).pack()
-
-root.mainloop()
-
-######################################################
-    
-
-
-
-
-    
-    
-
-
-    
+root.geometry("300x300")
+root.title(" Q&A ")
+ 
+def Take_input():
+    INPUT = inputtxt.get("1.0", "end-1c")
+    print(INPUT)
+    import datetime
+    REALTIME = datetime.datetime.now()
+    TIME = str(REALTIME)
+    Output.insert(END, INPUT + ">AT TIME>")
+    Output.insert(END, "")
+    Output.insert(END, TIME)
+     
+l = Label(text = "Enter ")
+inputtxt = Text(root, height = 10,
+                width = 25,
+                bg = "light yellow")
+ 
+Output = Text(root, height = 5, 
+              width = 25, 
+              bg = "white")
+ 
+Display = Button(root, height = 2,
+                 width = 20, 
+                 text ="Show",
+                 command = lambda:Take_input())
+ 
+l.pack()
+inputtxt.pack()
+Display.pack()
+Output.pack()
+ 
+mainloop()
