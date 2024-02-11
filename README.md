@@ -5,3 +5,4 @@ The project utilizes I/O operations file writing in Python(writing to a .txt fil
 Known bugs:
 When prompted for the amount of users we wish to track(Multiple Entry Mode) giving 0 causes the program to crash.
 
+<img> link="./ATC.PNG" </img>
