@@ -5,4 +5,4 @@ The project utilizes I/O operations file writing in Python(writing to a .txt fil
 Known bugs:
 When prompted for the amount of users we wish to track(Multiple Entry Mode) giving 0 causes the program to crash.
 
-[alt text](https://github.com/[Nermin-00]/[Arrival-Times-Tracker]/main/[README.md]/ATC.png?raw=true)
+[alt text](https://github.com/[Nermin-00]/[Arrival-Times-Tracker]/blob/[main]/ATC.png?raw=true)
